@@ -2,8 +2,8 @@
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostDuckyy/Ui-Librarys/main/Gerad's/source.lua"))()
 
-local Window = Library:CreateWindow('Segment Colorer')
-local Section = Window:Section('Segment Coloring')
+local Window = Library:CreateWindow('BYW SCRIPT')
+local Section = Window:Section('Functions')
 
 local originalColors = {}
 local autoWinConnection
@@ -120,7 +120,7 @@ local function stopAutoWin()
     isAutoWinRunning = false
 end
 
-Section:Toggle('Esp Block', {flag = 'EspBlock'}, function(value)
+Section:Toggle('Esp Glass', {flag = 'EspBlock'}, function(value)
     if value then
         colorSegmentsByBreakable()
     else
@@ -128,11 +128,11 @@ Section:Toggle('Esp Block', {flag = 'EspBlock'}, function(value)
     end
 end)
 
-Section:Button('Teleport to Finish', function()
+Section:Button('Телепорт к финишу', function()
     teleportToFinish()
 end)
 
-Section:Toggle('Auto Win', {flag = 'AutoWin'}, function(value)
+Section:Toggle('Авто телепорт', {flag = 'AutoWin'}, function(value)
     if value then
         startAutoWin()
         print("Auto Win: ON")
